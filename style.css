@@ -1,0 +1,75 @@
+/* Pixel Fishing — the palette is the bot's own accent colours, so the site
+   and the panels in Discord look like the same game. */
+:root {
+  --sea:    #2E7D5F;
+  --deep:   #0B1A20;
+  --paper:  #F2F5F4;
+  --card:   #FFFFFF;
+  --ink:    #10222A;
+  --body:   #3A4E56;
+  --mute:   #6E838B;
+  --line:   #D8E2E1;
+  --gold:   #A8720F;
+  --blue:   #26688A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #08141A; --card: #0F222C; --ink: #E9F2F2; --body: #B4C7CC;
+    --mute: #7C9298; --line: #1C333E; --sea: #4FB68C; --gold: #D9A445; --blue: #5AA6CE;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 80px;
+  background: var(--paper); color: var(--body);
+  font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+header { padding: 72px 0 8px; }
+h1 {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.05; letter-spacing: -.03em;
+  font-weight: 800; color: var(--ink); margin: 0;
+}
+h2 {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 1.35rem; letter-spacing: -.02em; font-weight: 700;
+  color: var(--ink); margin: 44px 0 .4em;
+}
+h3 {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--ink); margin: 28px 0 .3em;
+}
+p, li { max-width: 66ch; }
+p { margin: 0 0 1em; }
+a { color: var(--sea); }
+.lede { font-size: 1.2rem; color: var(--body); margin-top: 1em; }
+.tagline {
+  font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem;
+  font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--sea); margin: 0 0 18px;
+}
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 8px; }
+.btn {
+  font-family: ui-sans-serif, system-ui, sans-serif; font-size: .95rem; font-weight: 600;
+  text-decoration: none; padding: 11px 20px; border-radius: 8px;
+  background: var(--sea); color: #fff; border: 1px solid transparent;
+}
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+ul { padding-left: 1.15em; }
+li { margin-bottom: .45em; }
+li::marker { color: var(--sea); }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+@media (max-width: 620px) { .shots { grid-template-columns: 1fr; } }
+.shots img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; }
+footer {
+  margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line);
+  font-size: .9rem; color: var(--mute);
+}
+footer a { color: var(--mute); }
+.updated { font-size: .9rem; color: var(--mute); font-style: italic; }
+code {
+  font-family: ui-monospace, Menlo, monospace; font-size: .88em;
+  background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: .08em .35em;
+}
