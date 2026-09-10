@@ -1,0 +1,139 @@
+/* Pixel Fishing home page. The page is the descent: five oceans in zone
+   order, mangroves at the top and the trench at the bottom, each carrying a
+   plate of text styled like the caption plates in the game. */
+
+@font-face {
+  font-family: "Silkscreen"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(fonts/silkscreen-400.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Silkscreen"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url(fonts/silkscreen-700.woff2) format("woff2");
+}
+
+:root {
+  --ink:   #0B1A20;
+  --plate: #10222A;
+  --edge:  #1F3A46;
+  --paper: #E9F2F2;
+  --body:  #B4C7CC;
+  --mute:  #7C9298;
+  --sea:   #4FB68C;
+  --alarm: #E0603F;
+  --gold:  #D9A445;
+  --px: ui-monospace, "Silkscreen", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--ink); }
+body {
+  margin: 0; background: var(--ink); color: var(--body);
+  font: 17px/1.6 ui-serif, Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--sea); }
+.px { font-family: "Silkscreen", ui-monospace, monospace; letter-spacing: .04em; }
+
+/* One ocean per section, edge to edge, capped so the art never scales past
+   seven pixels per pixel on very wide screens. */
+.zone { max-width: 1680px; margin: 0 auto 72px; }
+.zone:last-of-type { margin-bottom: 0; }
+.sea { position: relative; line-height: 0; }
+.sea img {
+  width: 100%; height: auto; display: block;
+  image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated;
+}
+.tag {
+  position: absolute; left: 20px; bottom: 20px; line-height: 1.2;
+  font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--ink); color: var(--paper); padding: 8px 12px;
+}
+.tag b { color: var(--sea); font-weight: 400; }
+/* The tag sits in whichever corner the plate leaves free. */
+.zone:not(.right) .tag { left: auto; right: 20px; }
+
+/* The plate overlaps the bottom of its ocean, on whichever side the water is
+   calmer. */
+.plate {
+  position: relative; z-index: 1;
+  background: var(--plate); color: var(--body);
+  border: 3px solid var(--edge); box-shadow: 10px 10px 0 rgba(0, 0, 0, .45);
+  max-width: 640px; padding: 34px 40px 30px; margin: -150px 5vw 0;
+}
+.zone.right .plate { margin-left: auto; }
+.plate h2 {
+  font-family: "Silkscreen", monospace; font-weight: 700; font-size: 24px; line-height: 1.25;
+  letter-spacing: .02em; text-transform: uppercase; color: var(--paper); margin: 0 0 4px;
+}
+.meta {
+  font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--mute); margin: 0 0 22px;
+}
+.meta b { color: var(--sea); font-weight: 400; }
+.plate p { margin: 0 0 1em; max-width: 62ch; }
+.plate p:last-child { margin-bottom: 0; }
+
+/* Field notes: the real name, the real weight, and a note that is true. */
+.fish { margin: 0 0 20px; }
+.fish:last-of-type { margin-bottom: 0; }
+.fish .head { line-height: 1.35; margin-bottom: 4px; }
+.fish .name { color: var(--paper); font-weight: 700; }
+.fish .latin { font-style: italic; color: var(--mute); }
+.fish .wt { font-family: "Silkscreen", monospace; font-size: 11px; letter-spacing: .06em; color: var(--mute); white-space: nowrap; }
+.badge {
+  font-family: "Silkscreen", monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink); background: var(--gold); padding: 3px 6px; margin-left: 6px; white-space: nowrap; vertical-align: 2px;
+}
+.fish p { margin: 0; }
+.beat { margin-top: 24px; padding-top: 20px; border-top: 3px solid var(--edge); color: var(--paper); }
+.beat + .beat { margin-top: 0; padding-top: 0; border-top: 0; color: var(--body); }
+
+.deeper {
+  display: inline-block; margin-top: 22px; text-decoration: none;
+  font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--sea);
+}
+.deeper:hover { color: var(--paper); }
+
+/* Hero */
+.hero .plate { max-width: 760px; padding-top: 36px; }
+.kicker {
+  font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--sea); margin: 0 0 14px;
+}
+.hero h1 {
+  font-family: "Silkscreen", monospace; font-weight: 700; text-transform: uppercase;
+  font-size: clamp(26px, 4.6vw, 48px); line-height: 1.1; letter-spacing: .01em; color: var(--paper); margin: 0 0 18px;
+}
+.lede { font-size: 1.15rem; color: var(--paper); margin: 0 0 22px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 26px; }
+.btn {
+  font-family: "Silkscreen", monospace; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; text-decoration: none;
+  padding: 14px 18px; background: var(--sea); color: var(--ink);
+  border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+}
+.btn.ghost { background: var(--plate); color: var(--paper); border-color: var(--edge); box-shadow: 4px 4px 0 var(--edge); }
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
+.btn.ghost:hover { box-shadow: 5px 5px 0 var(--edge); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.hero .fish { padding-top: 22px; border-top: 3px solid var(--edge); }
+.hero .fish .head::before {
+  content: "Field note"; display: block; font-family: "Silkscreen", monospace; font-size: 11px;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px;
+}
+
+footer {
+  max-width: 1680px; margin: 0 auto; padding: 48px 5vw 56px;
+  font-size: .95rem; color: var(--mute);
+}
+footer p { margin: 0 0 .6em; max-width: 70ch; }
+footer a { color: var(--mute); }
+footer .px { font-size: 11px; color: var(--mute); }
+
+@media (max-width: 860px) {
+  .zone { margin-bottom: 48px; }
+  .sea img { aspect-ratio: 4 / 3; object-fit: cover; }
+  .plate, .zone.right .plate { margin: -40px 4vw 0; padding: 26px 22px 24px; max-width: none; box-shadow: 6px 6px 0 rgba(0, 0, 0, .45); }
+  /* The plate overlaps the bottom of the ocean here, so the tag moves up. */
+  .tag, .zone:not(.right) .tag { left: 12px; right: auto; top: 12px; bottom: auto; font-size: 11px; }
+  .plate h2 { font-size: 20px; }
+  body { font-size: 16px; }
+}
