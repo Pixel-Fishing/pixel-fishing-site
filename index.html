@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pixel Fishing · a Discord fishing game built on real fish</title>
-<meta name="description" content="Fish 88 real species across the Philippines, the North Atlantic and the Adriatic. A Discord game with local money, protected species and a record book you'll never finish.">
+<title>Pixel Fishing · a Discord fishing game</title>
+<meta name="description" content="A fishing game for Discord. Cast a line, watch the float, and reel the moment it goes under. Real fish, three seas, and a record book you will never finish.">
 <meta property="og:title" content="Pixel Fishing">
-<meta property="og:description" content="A Discord fishing game built on real fish. Three seas, fifteen depths, 88 species.">
+<meta property="og:description" content="A fishing game for Discord. Fishing is mostly waiting. Then it isn't.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pixelfishing.io/">
 <meta property="og:image" content="https://pixelfishing.io/img/empty-mangrove-ocean-animated.gif">
@@ -21,125 +21,61 @@
 </head>
 <body>
 
-<section class="zone hero right" id="mangroves">
+<section class="zone hero right" id="top">
   <div class="sea">
     <img src="img/empty-mangrove-ocean-animated.gif" width="960" height="424" alt="Mangrove roots at dusk, pink sky, green water over sand" fetchpriority="high">
-    <div class="tag">Mangroves <b>·</b> 0-3 m <b>·</b> pesos</div>
+    <div class="tag">Mangroves <b>·</b> 0-3 m</div>
   </div>
   <div class="plate">
     <p class="kicker">A Discord fishing game</p>
     <h1>Pixel Fishing</h1>
-    <p class="lede">Eighty-eight real species across three seas, each with its own money, its own tackle and its own fish. Cast, wait, and reel the moment the float goes under.</p>
+    <p class="lede">Fishing is mostly waiting. Then it isn't.</p>
+    <p>Cast a line in Discord, watch the float, and reel the moment it goes under.</p>
     <div class="buttons">
       <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1542098125215244398&amp;scope=bot+applications.commands&amp;permissions=34816">Add to a server</a>
       <a class="btn ghost" href="https://discord.com/oauth2/authorize?client_id=1542098125215244398&amp;integration_type=1&amp;scope=applications.commands">Add to yourself</a>
     </div>
-    <div class="fish">
-      <div class="head"><span class="name">Giant mudskipper</span> <span class="latin">Periophthalmodon schlosseri</span> <span class="wt">30 to 200 g</span></div>
-      <p>A fish that walks. It breathes through its skin and the lining of its mouth, and drowns if it is kept underwater too long.</p>
-    </div>
-    <a class="deeper" href="#reef">&#9660; Deeper &middot; the reef</a>
   </div>
 </section>
 
 <section class="zone" id="reef">
   <div class="sea">
-    <img src="img/empty-reef-ocean-animated.gif" width="960" height="424" alt="A coral reef under a bright sky, kelp and sponges below" loading="lazy" decoding="async">
-    <div class="tag">Fringing Reef <b>·</b> 0-15 m <b>·</b> pesos</div>
+    <img src="img/empty-reef-ocean-animated.gif" width="960" height="424" alt="A coral reef under a bright sky" loading="lazy" decoding="async">
+    <div class="tag">Fringing Reef <b>·</b> 0-15 m</div>
   </div>
   <div class="plate">
-    <h2>Fringing Reef</h2>
-    <p class="meta">0-15 m <b>·</b> The Coral Triangle</p>
-    <div class="fish">
-      <div class="head"><span class="name">False clown anemonefish</span> <span class="latin">Amphiprion ocellaris</span> <span class="wt">5 to 35 g</span></div>
-      <p>Every one hatches male. The dominant fish in an anemone becomes female, and if she dies her partner changes sex to replace her.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Mandarinfish</span> <span class="latin">Synchiropus splendidus</span> <span class="wt">2 to 10 g</span></div>
-      <p>One of only two vertebrates on earth whose blue comes from actual blue pigment. Every other blue animal is faking it with structural colour.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Bumphead parrotfish</span> <span class="latin">Bolbometopon muricatum</span> <span class="wt">15 to 46 kg</span> <span class="badge">Tag and release</span></div>
-      <p>Vulnerable. Sleeps in caves in groups, which made it trivially easy to spear at night, which is most of why it is Vulnerable.</p>
-    </div>
-    <p class="beat">The first fish you cannot sell live here. Carry tag kits and a bumphead is tagged and let go for research credit, and research credit is the only thing that opens deeper water.</p>
-    <a class="deeper" href="#dropoff">&#9660; Deeper &middot; the drop-off</a>
+    <h2>How it plays</h2>
+    <p>Type <span class="cmd">/fish</span> and wait. When the float goes under, hit <strong>Reel</strong>. That is the whole game, and how quickly you do it decides everything. Rarer fish give you less time.</p>
   </div>
 </section>
 
-<section class="zone right" id="dropoff">
+<section class="zone quiet" id="dropoff">
   <div class="sea">
     <img src="img/empty-drop-off-ocean-animated.gif" width="960" height="424" alt="A coral ledge falling away into open blue water" loading="lazy" decoding="async">
-    <div class="tag">The Drop-off <b>·</b> 10-60 m <b>·</b> pesos</div>
-  </div>
-  <div class="plate">
-    <h2>The Drop-off</h2>
-    <p class="meta">10-60 m <b>·</b> Permit water</p>
-    <div class="fish">
-      <div class="head"><span class="name">Giant trevally</span> <span class="latin">Caranx ignobilis</span> <span class="wt">3 to 50 kg</span></div>
-      <p>Hits so hard it has been filmed taking birds off the surface in mid-flight.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Humphead wrasse</span> <span class="latin">Cheilinus undulatus</span> <span class="wt">10 to 90 kg</span> <span class="badge">Tag and release</span></div>
-      <p>Endangered, and worth more alive than almost any reef fish alive is worth dead. Every one starts female; a few become male at around nine years old.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Green sea turtle</span> <span class="latin">Chelonia mydas</span> <span class="wt">30 to 150 kg</span> <span class="badge">Tag and release</span></div>
-      <p>Endangered. Grazes seagrass like a lawn and returns to the beach it hatched on to nest, decades later and thousands of miles away.</p>
-    </div>
-    <p class="beat">From here on the fish can be heavier than your line. A snap costs you the lure, and the reel you started with will not hold a trevally for long.</p>
-    <a class="deeper" href="#bluewater">&#9660; Deeper &middot; blue water</a>
+    <div class="tag">The Drop-off <b>·</b> 10-60 m</div>
   </div>
 </section>
 
-<section class="zone" id="bluewater">
+<section class="zone right" id="bluewater">
   <div class="sea">
-    <img src="img/empty-blue-water-ocean-animated.gif" width="960" height="424" alt="Open ocean, islands on the horizon, dark rocks far below" loading="lazy" decoding="async">
-    <div class="tag">Blue Water <b>·</b> 30-200 m <b>·</b> pesos</div>
+    <img src="img/empty-blue-water-ocean-animated.gif" width="960" height="424" alt="Open ocean with islands on the horizon" loading="lazy" decoding="async">
+    <div class="tag">Blue Water <b>·</b> 30-200 m</div>
   </div>
   <div class="plate">
-    <h2>Blue Water</h2>
-    <p class="meta">30-200 m <b>·</b> Open ocean</p>
-    <div class="fish">
-      <div class="head"><span class="name">Mahi-mahi</span> <span class="latin">Coryphaena hippurus</span> <span class="wt">2 to 20 kg</span></div>
-      <p>Grows from egg to a metre long inside a year, and loses its colour within minutes of dying.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Yellowfin tuna</span> <span class="latin">Thunnus albacares</span> <span class="wt">8 to 120 kg</span></div>
-      <p>Warm-blooded in the muscle and the eye, which lets it hunt in cold water its prey cannot think straight in.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Whale shark</span> <span class="latin">Rhincodon typus</span> <span class="wt">800 kg to 9 tonnes</span> <span class="badge">Tag and release</span></div>
-      <p>Endangered, and the largest fish alive. The pattern of spots behind the gills is unique to each one, like a fingerprint.</p>
-    </div>
-    <p class="beat">Rarer fish give you less time. A mahi-mahi allows three seconds. A sailfish gives you under two.</p>
-    <a class="deeper" href="#trench">&#9660; Deeper &middot; the trench</a>
+    <h2>Real fish, three seas</h2>
+    <p>Eighty-eight species, every one real, with its real weight and a note about it that is actually true. The Philippines, the North Atlantic and the Adriatic, each with its own money and its own water to learn.</p>
   </div>
 </section>
 
-<section class="zone right" id="trench">
+<section class="zone" id="trench">
   <div class="sea">
     <img src="img/empty-trench-ocean-animated.gif" width="960" height="424" alt="Sunset over deep water, the seabed splitting into a trench" loading="lazy" decoding="async">
-    <div class="tag">Philippine Trench <b>·</b> 200-1,000 m <b>·</b> pesos</div>
+    <div class="tag">Philippine Trench <b>·</b> as deep as it goes</div>
   </div>
   <div class="plate">
-    <h2>Philippine Trench</h2>
-    <p class="meta">200-1,000 m <b>·</b> Research permit only</p>
-    <div class="fish">
-      <div class="head"><span class="name">Goblin shark</span> <span class="latin">Mitsukurina owstoni</span> <span class="wt">30 to 200 kg</span> <span class="badge">Tag and release</span></div>
-      <p>Its jaws are on a hinge and fire forward out of its face to catch prey, then fold back flat. The last survivor of a family 125 million years old.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Megamouth shark</span> <span class="latin">Megachasma pelagios</span> <span class="wt">300 kg to 1.2 tonnes</span> <span class="badge">Tag and release</span></div>
-      <p>Barely 250 have ever been recorded anywhere, and the Philippines has produced more of them than almost anywhere else.</p>
-    </div>
-    <div class="fish">
-      <div class="head"><span class="name">Giant squid</span> <span class="latin">Architeuthis dux</span> <span class="wt">50 to 250 kg</span> <span class="badge">Tag and release</span></div>
-      <p>Eyes the size of dinner plates, the largest of any animal that has ever lived. Nobody photographed a live one until 2004.</p>
-    </div>
-    <p class="beat">The trench takes a research permit, and research credit cannot be bought. It is earned one tag at a time. Land a giant squid and you get three quarters of a second to set the hook.</p>
-    <p class="beat">Then the North Atlantic, in pounds, and the Adriatic, in euros. Money from one sea is no use in the next. Five leaderboards, per server and worldwide, and nothing you can buy moves any of them.</p>
-    <div class="buttons" style="margin-top:24px">
+    <h2>Nothing to buy</h2>
+    <p>Deeper water is earned, not bought. Tag and release the protected fish, fill the record book, climb boards that only skill can move.</p>
+    <div class="buttons">
       <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1542098125215244398&amp;scope=bot+applications.commands&amp;permissions=34816">Add to a server</a>
       <a class="btn ghost" href="https://discord.com/oauth2/authorize?client_id=1542098125215244398&amp;integration_type=1&amp;scope=applications.commands">Add to yourself</a>
     </div>

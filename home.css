@@ -57,35 +57,20 @@ a { color: var(--sea); }
   position: relative; z-index: 1;
   background: var(--plate); color: var(--body);
   border: 3px solid var(--edge); box-shadow: 10px 10px 0 rgba(0, 0, 0, .45);
-  max-width: 640px; padding: 34px 40px 30px; margin: -150px 5vw 0;
+  max-width: 560px; padding: 32px 38px 30px; margin: -120px 5vw 0;
 }
 .zone.right .plate { margin-left: auto; }
 .plate h2 {
-  font-family: "Silkscreen", monospace; font-weight: 700; font-size: 24px; line-height: 1.25;
-  letter-spacing: .02em; text-transform: uppercase; color: var(--paper); margin: 0 0 4px;
+  font-family: "Silkscreen", monospace; font-weight: 700; font-size: 22px; line-height: 1.25;
+  letter-spacing: .02em; text-transform: uppercase; color: var(--paper); margin: 0 0 14px;
 }
 .meta {
   font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
   color: var(--mute); margin: 0 0 22px;
 }
 .meta b { color: var(--sea); font-weight: 400; }
-.plate p { margin: 0 0 1em; max-width: 62ch; }
+.plate p { margin: 0 0 1em; max-width: 52ch; font-size: 1.1rem; line-height: 1.55; }
 .plate p:last-child { margin-bottom: 0; }
-
-/* Field notes: the real name, the real weight, and a note that is true. */
-.fish { margin: 0 0 20px; }
-.fish:last-of-type { margin-bottom: 0; }
-.fish .head { line-height: 1.35; margin-bottom: 4px; }
-.fish .name { color: var(--paper); font-weight: 700; }
-.fish .latin { font-style: italic; color: var(--mute); }
-.fish .wt { font-family: "Silkscreen", monospace; font-size: 11px; letter-spacing: .06em; color: var(--mute); white-space: nowrap; }
-.badge {
-  font-family: "Silkscreen", monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ink); background: var(--gold); padding: 3px 6px; margin-left: 6px; white-space: nowrap; vertical-align: 2px;
-}
-.fish p { margin: 0; }
-.beat { margin-top: 24px; padding-top: 20px; border-top: 3px solid var(--edge); color: var(--paper); }
-.beat + .beat { margin-top: 0; padding-top: 0; border-top: 0; color: var(--body); }
 
 .deeper {
   display: inline-block; margin-top: 22px; text-decoration: none;
@@ -94,7 +79,8 @@ a { color: var(--sea); }
 .deeper:hover { color: var(--paper); }
 
 /* Hero */
-.hero .plate { max-width: 760px; padding-top: 36px; }
+.hero .plate { max-width: 640px; padding-top: 36px; }
+.hero .plate > p:not(.kicker):not(.lede) { color: var(--body); font-size: 1.05rem; }
 .kicker {
   font-family: "Silkscreen", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
   color: var(--sea); margin: 0 0 14px;
@@ -103,8 +89,8 @@ a { color: var(--sea); }
   font-family: "Silkscreen", monospace; font-weight: 700; text-transform: uppercase;
   font-size: clamp(26px, 4.6vw, 48px); line-height: 1.1; letter-spacing: .01em; color: var(--paper); margin: 0 0 18px;
 }
-.lede { font-size: 1.15rem; color: var(--paper); margin: 0 0 22px; }
-.buttons { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 26px; }
+.lede { font-size: 1.35rem; color: var(--paper); margin: 0 0 10px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 14px; margin: 24px 0 4px; }
 .btn {
   font-family: "Silkscreen", monospace; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; text-decoration: none;
   padding: 14px 18px; background: var(--sea); color: var(--ink);
@@ -114,10 +100,11 @@ a { color: var(--sea); }
 .btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
 .btn.ghost:hover { box-shadow: 5px 5px 0 var(--edge); }
 .btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
-.hero .fish { padding-top: 22px; border-top: 3px solid var(--edge); }
-.hero .fish .head::before {
-  content: "Field note"; display: block; font-family: "Silkscreen", monospace; font-size: 11px;
-  letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px;
+/* An ocean with no plate: a breath between beats. */
+.zone.quiet { margin-bottom: 72px; }
+.cmd {
+  font-family: "Silkscreen", monospace; font-size: .8em; color: var(--paper);
+  background: var(--ink); border: 2px solid var(--edge); padding: 2px 6px; white-space: nowrap;
 }
 
 footer {
