@@ -1,0 +1,7 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5+threadwell.capture.8",
+  "base_commit_sha": "24c73cc5f3fa3a316653bb70cd9d0d54c761d5d4",
+  "prompts": {}
+}
