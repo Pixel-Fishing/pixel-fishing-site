@@ -32,7 +32,7 @@ the message but with enough Discord chrome that it reads as Discord.
 | --- | --- |
 | `listing-bite.gif` | The float on the swell, then the alarm and REEL! |
 | `listing-catch.gif` | A trophy giant trevally, with what the panel says about it. |
-| `listing-book.gif` | The record book, paging through the five Philippine zones. |
+| `listing-book.gif` | The record book, paging through the three drawn zones. |
 | `listing-card.gif` | Five `/show` cards, one after another. |
 
 These are built rather than screenshotted: the pictures come out of the game's
@@ -40,6 +40,10 @@ own renderer at 960 px and are dropped into a drawn Discord message at 1:1, so
 the pixel art is never resampled. Every line of text on them is a string the
 bot actually sends. `/tmp/promo/build.py` is the script, and it leans on a
 throwaway `tools/promoart` in the app repo for the artwork.
+
+Only hand-drawn species go on these. Blue Water and the Philippine Trench are
+still on procedural sprites, so they stay out of the book pages until someone
+has drawn them.
 
 ## Keeping them small
 
