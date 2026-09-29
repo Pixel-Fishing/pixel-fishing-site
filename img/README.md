@@ -15,7 +15,7 @@ markdown, so every image in it has to be a URL.
 | `icon.png` | The app icon. Also the site favicon. | 512 × 512 |
 | `og.png` | The link preview when the site is shared. | 1200 × 630 |
 | `01-cast.png` | The waiting panel: float on the swell, Reel button. | 16:9 |
-| `02-bite.png` | The alarm frame — red border, REEL! | 16:9 |
+| `02-bite.png` | The alarm frame: gold border, REEL! | 16:9 |
 | `03-catch.png` | A catch reveal with a good field note. | 16:9 |
 | `04-dex.png` | The record book, about two-thirds filled. | 16:9 |
 | `05-map.png` | The map cross-section with a locked zone showing its price. | 16:9 |
@@ -25,6 +25,21 @@ markdown, so every image in it has to be a URL.
 
 Take the screenshots on the live bot in a real server, dark theme, cropped to
 the message but with enough Discord chrome that it reads as Discord.
+
+## The top.gg description
+
+| File | What it is |
+| --- | --- |
+| `listing-bite.gif` | The float on the swell, then the alarm and REEL! |
+| `listing-catch.gif` | A trophy giant trevally, with what the panel says about it. |
+| `listing-book.gif` | The record book, paging through the five Philippine zones. |
+| `listing-card.gif` | Five `/show` cards, one after another. |
+
+These are built rather than screenshotted: the pictures come out of the game's
+own renderer at 960 px and are dropped into a drawn Discord message at 1:1, so
+the pixel art is never resampled. Every line of text on them is a string the
+bot actually sends. `/tmp/promo/build.py` is the script, and it leans on a
+throwaway `tools/promoart` in the app repo for the artwork.
 
 ## Keeping them small
 
